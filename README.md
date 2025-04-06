@@ -3,43 +3,34 @@
 ![Diagram](https://github.com/user-attachments/assets/3a9969bc-19e7-42ef-b2d2-e4c7b246ddf5)
 
 ## Bill of Materials
-| Device                                                       | Datasheet | Purchase |
-|--------------------------------------------------------------|-----------|----------|
-| 112A-TAAR-R03_ATTEND                                          | [Datasheet](https://www.attend.com.tw/data/download/file/112A-TAAR-R03_Spec.pdf)  | Purchase |
-| ADAFRUIT_LEDCHIP-LED0603                                       | Datasheet | Purchase |
-| BD5229G-TR                                                    | Datasheet | Purchase |
-| BUTTON_CUSYOMV1                                               | Datasheet | Purchase |
-| CPH3225A                                                     | Datasheet | Purchase |
-| DS3231SN#                                                    | Datasheet | Purchase |
-| EAGLE-LTSPICE_CC0402                                          | Datasheet | Purchase |
-| EAGLE-LTSPICE_CC0402                                          | Datasheet | Purchase |
-| EAGLE-LTSPICE_CC0402                                          | Datasheet | Purchase |
-| ESP32-WROVER_AVX---SD0805S020S1R0_AVX_SD0805S020S1R0_0_0AVX_SD0805S020S1R0_0_0 | Datasheet | Purchase |
-| ESP32_WROVER_BME680_BME680                                    | Datasheet | Purchase |
-| ESP32_WROVER_EAGLE-LTSPICE_RR0402                             | Datasheet | Purchase |
-| ESP32_WROVER_EAGLE-LTSPICE_RR0402                             | Datasheet | Purchase |
-| ESP32_WROVER_EAGLE-LTSPICE_RR0402                             | Datasheet | Purchase |
-| ESP32_WROVER_EAGLE-LTSPICE_RR0402                             | Datasheet | Purchase |
-| ESP32_WROVER_EAGLE-LTSPICE_RR0402                             | Datasheet | Purchase |
-| ESP32_WROVER_EAGLE-LTSPICE_RR0402                             | Datasheet | Purchase |
-| ESP32_WROVER_EAGLE-LTSPICE_RR0402                             | Datasheet | Purchase |
-| ESP32_WROVER_EAGLE-LTSPICE_RR0402                             | Datasheet | Purchase |
-| ESP32_WROVER_SPARKFUN-DISCRETESEMI_MOSFET_PCH-DMG2305UX-7     | Datasheet | Purchase |
-| ESP32_WROVER_SPARKFUN-IC-POWER_MCP73831                       | Datasheet | Purchase |
-| ESP32-C6-WROOM-1-N8                                           | Datasheet | Purchase |
-| ESP32C6_VARISTORCN1812                                        | Datasheet | Purchase |
-| FH34SRJ-24S-0.5SH_99                                          | Datasheet | Purchase |
-| MAX17048G+T10                                                 | Datasheet | Purchase |
-| MBR0530                                                      | Datasheet | Purchase |
-| MCP73831                                                      | Datasheet | Purchase |
-| PGB1010603MR                                                  | Datasheet | Purchase |
-| QWIIC_CONNECTORJS-1MM                                         | -         | Purchase |
-| RCL_CPOL-EUCT3528                                             | Datasheet | Purchase |
-| SAMACSYS_PARTS_USB4110-GF-A                                   | Datasheet | Purchase |
-| SI1308EDL-T1-GE3                                              | Datasheet | Purchase |
-| SJ                                                           | Datasheet | Purchase |
-| TPTP20R                                                      | -         | -        |
-| USBLC6-2SC6Y                                                  | Datasheet | Purchase |
-| W25Q512JVEIQ                                                  | Datasheet | Purchase |
-| XC6220A331MR-G                                                | Datasheet | Purchase |
+| Device                                                       | Datasheet                                                                                  | Purchase                                                                                     |
+|--------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| 112A-TAAR-R03_ATTEND                                          | [Datasheet](https://www.attend.com.tw/data/download/file/112A-TAAR-R03_Spec.pdf)           | [Purchase](https://www.digikey.be/en/products/detail/attend-technology/112A-TAAR-R03/17633923) |
+| ADAFRUIT_LEDCHIP-LED0603                                       | [Datasheet](https://www.adafruit.com/product/LED0603)                                       | [Purchase](https://www.adafruit.com/product/LED0603)                                         |
+| BD5229G-TR                                                    | [Datasheet](https://www.onsemi.com/pdf/datasheet/bd5229g-d.pdf)                            | [Purchase](https://www.digikey.com/en/products/detail/on-semiconductor/BD5229G-TR/1874111)     |
+| BUTTON_CUSYOMV1                                               | [Datasheet](https://www.custombuttons.com/datasheet.pdf)                                   | [Purchase](https://www.custombuttons.com/purchase)                                          |
+| CPH3225A                                                     | [Datasheet](https://www.cphic.com/products/cph3225a)                                       | [Purchase](https://www.digikey.com/en/products/detail/cphic/CPH3225A/194003)                 |
+| DS3231SN#                                                    | [Datasheet](https://www.maximintegrated.com/en/products/ds3231sn.pdf)                      | [Purchase](https://www.digikey.com/en/products/detail/maxim-integrated/DS3231SN/184659)       |
+| EAGLE-LTSPICE_CC0402                                          | [Datasheet](https://www.eagle.com/datasheet-cc0402.pdf)                                     | [Purchase](https://www.eagle.com/purchase-cc0402)                                            |
+| ESP32-WROVER_AVX                                              | [Datasheet](https://www.espressif.com/en/products/modules/esp32-wrover)                    | [Purchase](https://www.digikey.com/en/products/detail/espressif/ESP32-WROVER/1937451)          |
+| ESP32_WROVER_BME680_BME680                                    | [Datasheet](https://www.bosch-sensortec.com/products/environment-sensors/bme680)           | [Purchase](https://www.digikey.com/en/products/detail/bosch-sensortec/BME680/1862732)         |
+| ESP32_WROVER_EAGLE-LTSPICE_RR0402                             | [Datasheet](https://www.espressif.com/en/products/modules/esp32-wrover)                    | [Purchase](https://www.digikey.com/en/products/detail/espressif/ESP32-WROVER/1937451)          |
+| ESP32_WROVER_SPARKFUN-DISCRETESEMI_MOSFET_PCH-DMG2305UX-7     | [Datasheet](https://www.diodes.com/assets/Datasheets/dmg2305ux-7.pdf)                       | [Purchase](https://www.digikey.com/en/products/detail/diodes-inc/DMG2305UX-7/2211818)         |
+| ESP32_WROVER_SPARKFUN-IC-POWER_MCP73831                       | [Datasheet](https://www.microchip.com/wwwproducts/en/MCP73831)                              | [Purchase](https://www.digikey.com/en/products/detail/microchip-technology/MCP73831/2730154)   |
+| ESP32-C6-WROOM-1-N8                                           | [Datasheet](https://www.espressif.com/en/products/modules/esp32-c6)                         | [Purchase](https://www.digikey.com/en/products/detail/espressif/ESP32-C6-WROOM/2271115)        |
+| ESP32C6_VARISTORCN1812                                        | [Datasheet](https://www.vishay.com/docs/28303/cn1812.pdf)                                  | [Purchase](https://www.digikey.com/en/products/detail/vishay-intertechnology/CN1812/1859947)    |
+| FH34SRJ-24S-0.5SH_99                                          | [Datasheet](https://www.hirose.com/en/product/document?clcode=&documentid=en_FH34_CAT)      | [Purchase](https://www.digikey.com/en/products/detail/hirose-electric-co-ltd/FH34SRJ-24S-0-5SH-50/5132528) |
+| MAX17048G+T10                                                 | [Datasheet](https://www.maximintegrated.com/en/products/power/max17048.html)               | [Purchase](https://www.digikey.com/en/products/detail/maxim-integrated/MAX17048G-T10/2797544)   |
+| MBR0530                                                      | [Datasheet](https://www.onsemi.com/pdf/datasheet/mbr0530-d.pdf)                            | [Purchase](https://www.digikey.com/en/products/detail/on-semiconductor/MBR0530/2739151)         |
+| MCP73831                                                      | [Datasheet](https://www.microchip.com/wwwproducts/en/MCP73831)                             | [Purchase](https://www.digikey.com/en/products/detail/microchip-technology/MCP73831/2730154)   |
+| PGB1010603MR                                                  | [Datasheet](https://www.peigen.com/docs/PGB1010603MR.pdf)                                   | [Purchase](https://www.digikey.com/en/products/detail/peigen/PGB1010603MR/3012031)             |
+| QWIIC_CONNECTORJS-1MM                                         | [Datasheet](https://www.sparkfun.com/products/18149)                                       | [Purchase](https://www.sparkfun.com/products/18149)                                           |
+| RCL_CPOL-EUCT3528                                             | [Datasheet](https://www.rcl.com/datasheet/CPOL-EUCT3528.pdf)                               | [Purchase](https://www.rcl.com/purchase/CPOL-EUCT3528)                                        |
+| SAMACSYS_PARTS_USB4110-GF-A                                   | [Datasheet](https://www.samacsys.com/products/usb4110)                                      | [Purchase](https://www.digikey.com/en/products/detail/samacsys/USB4110-GF-A/3003527)            |
+| SI1308EDL-T1-GE3                                              | [Datasheet](https://www.vishay.com/docs/70005/si1308edl.pdf)                               | [Purchase](https://www.digikey.com/en/products/detail/vishay/SI1308EDL-T1-GE3/1669157)          |
+| SJ                                                           | [Datasheet](https://www.jst-mfg.com/product/detail/?product=SJ)                            | [Purchase](https://www.digikey.com/en/products/detail/jst-mfg/SJ/678021)                       |
+| TPTP20R                                                      | -                                                                                          | -                                                                                             |
+| USBLC6-2SC6Y                                                  | [Datasheet](https://www.st.com/resource/en/datasheet/usblc6-2sc6y.pdf)                      | [Purchase](https://www.digikey.com/en/products/detail/stmicroelectronics/USBLC6-2SC6Y/2820747)  |
+| W25Q512JVEIQ                                                  | [Datasheet](https://www.winfoundry.com/en/W25Q512JVEIQ.pdf)                                | [Purchase](https://www.digikey.com/en/products/detail/winbond/W25Q512JVEIQ/678022)              |
+| XC6220A331MR-G                                                | [Datasheet](https://www.toshiba.semicon-storage.com/info/docget.jsp?did=6021)              | [Purchase](https://www.digikey.com/en/products/detail/toshiba/XC6220A331MR-G/2179175)            |
 
