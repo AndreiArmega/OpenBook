@@ -34,3 +34,111 @@
 | W25Q512JVEIQ                                                  | [Datasheet](https://eu.mouser.com/datasheet/2/949/Winbond_W25Q512JV_Datasheet-3240039.pdf)                                | [Purchase](https://eu.mouser.com/ProductDetail/Winbond/W25Q512JVEIQ?qs=l7cgNqFNU1jw6svr3at6tA%3D%3D)              |
 | XC6220A331MR-G                                                | [Datasheet](https://eu.mouser.com/datasheet/2/760/xc6220-3371556.pdf)              | [Purchase](https://eu.mouser.com/ProductDetail/Torex-Semiconductor/XC6220A331MR-G?qs=AsjdqWjXhJ8ZSWznL1J0gg%3D%3D)            |
 
+
+## Functionality
+### ESP32-C6-WROOM-1-N8
+he ESP32-C6-WROOM-1-N8 is a powerful microcontroller module from Espressif Systems that integrates Wi-Fi (802.11ax) and Bluetooth LE (5.0) capabilities. It is designed for IoT (Internet of Things) applications that require wireless communication. Let's focus on how the components interact with this microcontroller, as well as consider interfaces, communication specifications, energy consumption, and processing:
+
+### Key Components That Interact with the ESP32-C6-WROOM-1-N8:
+  1. MCP73831 - Battery Charge Management IC
+  Interface: This component connects to the ESP32-C6 via GPIO pins to monitor battery status and control the charging process.
+  
+  Functionality: The MCP73831 manages the charging of lithium-ion batteries. It interacts with the ESP32 for real-time battery monitoring. The ESP32 can detect charging states or battery levels through ADC (Analog-to-Digital Converter) readings or dedicated communication (e.g., I2C/SPI) if the design includes more advanced battery management.
+  
+  Power Consumption: The ESP32-C6-WROOM-1-N8 would use this component to ensure efficient power management, especially when operating on a battery.
+  
+  2. ESP32-WROVER (e.g., ESP32-WROVER-BME680) - Environmental Sensing
+  Interface: The ESP32 connects to the BME680 sensor via I2C (or SPI) to read environmental data, such as temperature, humidity, pressure, and air quality.
+  
+  Functionality: The BME680 sensor communicates with the ESP32 via I2C/SPI, providing critical environmental data. This is commonly used in IoT applications like smart home systems, weather stations, or air quality monitoring systems.
+  
+  Power Consumption: The ESP32-C6 must manage the power consumption of the sensor and optimize wake-up intervals, using low-power states when idle.
+  
+  3. USBLC6-2SC6Y - USB Transient Voltage Suppressor
+  Interface: This component is generally used on the USB lines connecting the ESP32 to external devices. It is connected across the USB data lines to prevent damage from voltage spikes.
+  
+  Functionality: It ensures that the USB port of the ESP32 is protected from over-voltage or transient spikes that could otherwise damage sensitive circuits.
+  
+  Power Consumption: USBLC6-2SC6Y does not significantly affect power consumption, but it ensures stable power delivery to the microcontroller.
+  
+  4. DS3231SN# - Real-Time Clock (RTC)
+  Interface: I2C is used to connect the DS3231SN# RTC module with the ESP32.
+  
+  Functionality: The DS3231 provides accurate timekeeping, even when the ESP32 is powered down. This is important for time-dependent tasks, like logging data, scheduling actions, or maintaining time in low-power states.
+  
+  Power Consumption: The ESP32 can operate in deep sleep mode, while the DS3231 keeps track of time. The RTC has low power consumption and runs off a small coin cell battery.
+  
+  5. W25Q512JVEIQ - Flash Memory
+  Interface: This flash memory connects to the ESP32 via the SPI interface.
+  
+  Functionality: The W25Q512JVEIQ is used to store data, firmware, or other assets for the application. It is commonly used for data logging, firmware updates, or storing non-volatile data.
+  
+  Power Consumption: Flash memory is typically low power, but the ESP32 should manage read/write operations carefully to conserve energy, especially when operating on battery power.
+  
+  6. PGB1010603MR - ESD Protection
+  Interface: This component is placed on various I/O lines of the ESP32 (such as GPIO, SPI, I2C, etc.) to protect against electrostatic discharge.
+  
+  Functionality: PGB1010603MR protects the ESP32 from ESD, preventing damage from static electricity that could occur during handling or operation.
+  
+  Power Consumption: It does not impact the power consumption of the ESP32, but it is crucial for ensuring stable operation in environments with potential ESD risk.
+
+### Communication Interfaces & Specifications:
+Wireless Communication: The ESP32-C6-WROOM-1-N8 supports Wi-Fi 6 (802.11ax) and Bluetooth 5.0. These are high-speed communication protocols for connecting to IoT devices, networks, and other wireless systems.
+
+Wi-Fi: 2.4GHz and 5GHz bands support high-speed data transfer.
+
+Bluetooth LE: Allows for low-power, short-range communication with peripherals.
+
+Wired Communication: The microcontroller supports multiple communication protocols, such as:
+
+SPI: Used for high-speed communication with peripherals like flash memory (W25Q512JVEIQ).
+
+I2C: A popular protocol for sensors like the BME680 and the DS3231.
+
+UART: For serial communication, commonly used for debugging or communication with external devices.
+
+### Processing Power & Energy Consumption:
+  Processing: The ESP32-C6 has a single-core 32-bit RISC-V processor with a clock speed of up to 160 MHz. It is optimized for real-time processing and is capable of handling multi-tasking and communication protocols like Wi-Fi and Bluetooth simultaneously.
+  
+  Energy Consumption: The ESP32-C6-WROOM-1-N8 is designed for low-power applications. It features various low-power modes such as:
+  
+  Light Sleep: Keeps the Wi-Fi/Bluetooth active while reducing CPU activity.
+  
+  Deep Sleep: Cuts off most peripherals and uses minimal power.
+  
+  Hibernation: The lowest power mode, where only the RTC is active (useful for low-power sensors or battery-powered IoT devices).
+  
+  Power Management: When integrated with components like the MCP73831 for battery charging and the DS3231SN# RTC, the ESP32-C6 can be configured to wake up at specific intervals to process tasks (e.g., checking sensors, reporting data) and return to sleep mode to conserve battery life.
+
+## ESP32-C6 Pins
+| **Pin ESP32** | **Funcție Principală** | **Componentă Conectată / Scop**                               |
+|---------------|------------------------|---------------------------------------------------------------|
+| IO0           | INT_RTC                       |U3                                                               |
+| IO1           |  32KHZ                      |  U3                                                             |
+| IO2           |   MISO                     | J4  ,U1                                                            |
+| IO3           |   EPD_BUSY                     | J1                                                              |
+| IO4           | SS_SD                  | J4                                                      |
+| IO5           | EPD_DC                  | J1                                                   |
+| IO6           | SPI SCK                | J1,U1                                    |
+| IO7           | SPI MOSI               | J4 , J1 ,U1                                     |
+| IO8           | GPIO8                   | 3V3                                            |
+| IO9           | IO/BOOT                  | IC1                                             |
+| IO10          | GPIO / SPI EPD CS          | J1                                                    |
+| IO11          | GPIO / SPI FLASH CS          | U1                                                   |
+| IO12          | USB D          | D1                                                   |
+| IO13          | USB D+                 | D1                                          |
+| IO15          | I/O CHANGE                | IC1                                         |
+| GPIO16          | TX              | SPI  TX   -                                      |
+| GPIO17          | RX                | SPI   RX  -                                    |
+| IO18          | RTC_RST                | U3                                         |
+| IO19          | I2C PW                | BME                             |
+| IO20          | EPD_3V3_c                | Q2                              |
+| IO21          | SDA                   | J3 ,U3 ,BME , U4                                                |
+| IO22          | SCL                   | J3 ,U3 ,BME ,U4                                              |
+| IO23          | EPD_RST                   | J1                                                  |
+| EN            | RESET                 | Pull-up  3.3V                                               |
+| VDD           | 3V3                  | 3.3V                                                          |
+| GND           | GND                | Ground                                                        |
+| NC            | -                   | -                                                             |
+
+  
