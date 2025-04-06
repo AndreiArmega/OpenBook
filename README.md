@@ -111,34 +111,36 @@ UART: For serial communication, commonly used for debugging or communication wit
   Power Management: When integrated with components like the MCP73831 for battery charging and the DS3231SN# RTC, the ESP32-C6 can be configured to wake up at specific intervals to process tasks (e.g., checking sensors, reporting data) and return to sleep mode to conserve battery life.
 
 ## ESP32-C6 Pins
+
 | **Pin ESP32** | **Funcție Principală** | **Componentă Conectată / Scop**                               |
 |---------------|------------------------|---------------------------------------------------------------|
-| IO0           | INT_RTC                       |U3                                                               |
-| IO1           |  32KHZ                      |  U3                                                             |
-| IO2           |   MISO                     | J4  ,U1                                                            |
-| IO3           |   EPD_BUSY                     | J1                                                              |
-| IO4           | SS_SD                  | J4                                                      |
-| IO5           | EPD_DC                  | J1                                                   |
-| IO6           | SPI SCK                | J1,U1                                    |
-| IO7           | SPI MOSI               | J4 , J1 ,U1                                     |
-| IO8           | GPIO8                   | 3V3                                            |
-| IO9           | IO/BOOT                  | IC1                                             |
-| IO10          | GPIO / SPI EPD CS          | J1                                                    |
-| IO11          | GPIO / SPI FLASH CS          | U1                                                   |
-| IO12          | USB D          | D1                                                   |
-| IO13          | USB D+                 | D1                                          |
-| IO15          | I/O CHANGE                | IC1                                         |
-| GPIO16          | TX              | SPI  TX   -                                      |
-| GPIO17          | RX                | SPI   RX  -                                    |
-| IO18          | RTC_RST                | U3                                         |
-| IO19          | I2C PW                | BME                             |
-| IO20          | EPD_3V3_c                | Q2                              |
-| IO21          | SDA                   | J3 ,U3 ,BME , U4                                                |
-| IO22          | SCL                   | J3 ,U3 ,BME ,U4                                              |
-| IO23          | EPD_RST                   | J1                                                  |
-| EN            | RESET                 | Pull-up  3.3V                                               |
-| VDD           | 3V3                  | 3.3V                                                          |
-| GND           | GND                | Ground                                                        |
-| NC            | -                   | -                                                             |
+| IO0           | INT_RTC                | U3 (DNS323, Interrupt from RTC) – Triggering or controlling RTC operations. |
+| IO1           | 32KHZ                  | U3 (DNS323, 32kHz Crystal Oscillator) – Used for timing and clock generation. |
+| IO2           | MISO                   | J4 (112A-TAAR) & U1 (W25Q, SPI Data In) – Master In Slave Out line for SPI communication. |
+| IO3           | EPD_BUSY               | J1 (FH34, EPD busy signal) – Indicates when the EPD is busy. |
+| IO4           | SS_SD                  | J4 (112A-TAAR, SD card chip select) – Controls SD card communication. |
+| IO5           | EPD_DC                 | J1 (FH34, EPD Data/Command signal) – Controls the data or command mode for the EPD. |
+| IO6           | SPI SCK                | J1 (FH34) & U1 (W25Q, SPI Clock) – Provides clock signal for SPI communication. |
+| IO7           | SPI MOSI               | J4 (112A-TAAR), J1 (FH34), U1 (W25Q, SPI Data Out) – Master Out Slave In line for SPI communication. |
+| IO8           | GPIO8                  | 3V3 – Used as a general-purpose I/O pin, connected to 3.3V for simple logic. |
+| IO9           | IO/BOOT                | IC1 (BD5229) – Used for bootloading during startup. |
+| IO10          | GPIO / SPI EPD CS      | J1 (FH34, EPD Chip Select) – Selects EPD for SPI communication. |
+| IO11          | GPIO / SPI FLASH CS    | U1 (W25Q, Flash Chip Select) – Selects the flash memory for SPI communication. |
+| IO12          | USB D                  | D1 (USBLC6, USB Data -) – Handles negative signal of USB communication. |
+| IO13          | USB D+                 | D1 (USBLC6, USB Data +) – Handles positive signal of USB communication. |
+| IO15          | I/O CHANGE             | IC1 (BD5229) – Used for triggering I/O state changes or controlling other circuits. |
+| GPIO16        | TX                     | SPI TX – Transmit data via SPI for various components. |
+| GPIO17        | RX                     | SPI RX – Receive data via SPI for various components. |
+| IO18          | RTC_RST                | U3 (DNS323, RTC Reset) – Reset signal for RTC operations. |
+| IO19          | I2C SDA                | IC2 (MCP73831, RTC SDA), IC3 (BME680, BME SDA/SDO) – I2C data line. |
+| IO20          | EPD_3V3_c              | Q2 (Voltage regulator) – Provides 3.3V to the EPD. |
+| IO21          | SDA                    | J3 (Qwiic Connector), U3 (DNS323), BME680 (Sensor SDA), U4 (Max17048, SDA) – I2C data line for communication. |
+| IO22          | SCL                    | J3 (Qwiic Connector), U3 (DNS323), BME680 (Sensor SCL), U4 (Max17048, SCL) – I2C clock line for communication. |
+| IO23          | EPD_RST                | J1 (FH34, EPD Reset) – Resets the EPD during initialization. |
+| EN            | RESET                  | Pull-up to 3.3V – Used to reset the ESP32-C6 module. |
+| VDD           | 3V3                    | 3.3V Power supply for the module. |
+| GND           | GND                    | Ground connection. |
+| NC            | -                      | Not connected – Reserved pin. |
+
 
   
