@@ -37,7 +37,7 @@
 
 ## Functionality
 ### ESP32-C6-WROOM-1-N8
-he ESP32-C6-WROOM-1-N8 is a powerful microcontroller module from Espressif Systems that integrates Wi-Fi (802.11ax) and Bluetooth LE (5.0) capabilities. It is designed for IoT (Internet of Things) applications that require wireless communication. Let's focus on how the components interact with this microcontroller, as well as consider interfaces, communication specifications, energy consumption, and processing:
+The ESP32-C6-WROOM-1-N8 is a powerful microcontroller module from Espressif Systems that integrates Wi-Fi (802.11ax) and Bluetooth LE (5.0) capabilities. It is designed for IoT (Internet of Things) applications that require wireless communication. Let's focus on how the components interact with this microcontroller, as well as consider interfaces, communication specifications, energy consumption, and processing:
 
 ### Key Components That Interact with the ESP32-C6-WROOM-1-N8:
   1. MCP73831 - Battery Charge Management IC
